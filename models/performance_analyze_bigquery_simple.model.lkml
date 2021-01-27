@@ -44,9 +44,51 @@ explore: ship_mode {}
 
 explore: store {}
 
-explore: store_returns {}
+explore: store_returns {
+  join:  customer{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${store_returns.sr_customer_sk} = ${customer.c_customer_sk} ;;
+  }
+  join:  date_dim{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${store_returns.sr_returned_date_sk} =  ${date_dim.d_date_sk};;
+  }
+  join:  item{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${store_returns.sr_item_sk} =  ${item.i_item_sk};;
+  }
+  join:  store{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${store_returns.sr_store_sk} =  ${store.s_store_sk};;
+  }
+}
 
-explore: store_sales {}
+explore: store_sales {
+  join:  customer{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${store_sales.ss_customer_sk} = ${customer.c_customer_sk} ;;
+  }
+  join:  date_dim{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${store_sales.ss_sold_date_sk} =  ${date_dim.d_date_sk};;
+  }
+  join:  item{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${store_sales.ss_item_sk} =  ${item.i_item_sk};;
+  }
+  join:  store{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${store_sales.ss_store_sk} =  ${store.s_store_sk};;
+  }
+}
 
 explore: time_dim {}
 
@@ -54,8 +96,30 @@ explore: warehouse {}
 
 explore: web_page {}
 
-explore: web_returns {}
+explore: web_returns {
+  join:  item{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${web_returns.wr_item_sk} =  ${item.i_item_sk};;
+  }
+  join:  web_page{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${web_returns.wr_web_page_sk} =  ${web_page.wp_web_page_sk};;
+  }
+}
 
-explore: web_sales {}
+explore: web_sales {
+  join:  web_page{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${web_sales.ws_web_page_sk} =  ${web_page.wp_web_page_sk};;
+  }
+  join:  web_site{
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${web_sales.ws_web_site_sk} =  ${web_site.web_site_sk};;
+  }
+}
 
 explore: web_site {}

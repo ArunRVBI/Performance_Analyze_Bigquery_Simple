@@ -12,8 +12,8 @@ view: web_returns {
     sql: ${TABLE}.WR_FEE ;;
   }
 
-  measure: wr_item_sk {
-    type: sum
+  dimension: wr_item_sk {
+    type: number
     sql: ${TABLE}.WR_ITEM_SK ;;
   }
 
