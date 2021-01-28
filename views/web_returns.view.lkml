@@ -17,8 +17,8 @@ view: web_returns {
     sql: ${TABLE}.WR_ITEM_SK ;;
   }
 
-  dimension: wr_net_loss {
-    type: number
+  measure: wr_net_loss {
+    type: sum
     sql: ${TABLE}.WR_NET_LOSS ;;
   }
 
