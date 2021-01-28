@@ -102,7 +102,10 @@ view: web_sales {
     type: number
     sql: ${TABLE}.WS_PROMO_SK ;;
   }
-
+  measure: ws_quantity_avg {
+    type: average
+    sql: ${TABLE}.WS_QUANTITY ;;
+  }
   dimension: ws_quantity {
     type: number
     sql: ${TABLE}.WS_QUANTITY ;;
