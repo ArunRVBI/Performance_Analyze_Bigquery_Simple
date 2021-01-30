@@ -1,5 +1,5 @@
 view: customer {
-  sql_table_name: `TPCDS.CUSTOMER`
+  sql_table_name: `TPCDS_DEV.CUSTOMER`
     ;;
   drill_fields: [c_customer_id]
 

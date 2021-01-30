@@ -1,5 +1,5 @@
 view: time_dim {
-  sql_table_name: `TPCDS.TIME_DIM`
+  sql_table_name: `TPCDS_DEV.TIME_DIM`
     ;;
 
   dimension: t_am_pm {

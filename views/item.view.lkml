@@ -1,5 +1,5 @@
 view: item {
-  sql_table_name: `TPCDS.ITEM`
+  sql_table_name: `TPCDS_DEV.ITEM`
     ;;
   drill_fields: [i_item_id]
 

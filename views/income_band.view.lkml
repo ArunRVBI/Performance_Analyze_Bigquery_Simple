@@ -1,5 +1,5 @@
 view: income_band {
-  sql_table_name: `TPCDS.INCOME_BAND`
+  sql_table_name: `TPCDS_DEV.INCOME_BAND`
     ;;
 
   dimension: ib_income_band_sk {

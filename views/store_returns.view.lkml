@@ -1,5 +1,5 @@
 view: store_returns {
-  sql_table_name: `TPCDS.STORE_RETURNS`
+  sql_table_name: `TPCDS_DEV.STORE_RETURNS`
     ;;
 
   dimension: sr_addr_sk {
