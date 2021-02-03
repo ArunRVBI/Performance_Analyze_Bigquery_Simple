@@ -154,7 +154,7 @@ view: date_dim {
 
   dimension: dMonth_Year {
     type: string
-    sql: TO_CHAR(DATE_TRUNC('month', date_dim.D_DATE ), 'YYYY-MM');;
+    sql: CONCAT(CAST(EXTRACT(YEAR FROM date_dim.D_DATE)  AS STRING),"-", CAST(EXTRACT(MONTH FROM date_dim.D_DATE)  AS STRING));;
   }
 
   measure: count {
