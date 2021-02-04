@@ -8,6 +8,7 @@ datagroup: performance_analyze_bigquery_simple_default_datagroup {
   max_cache_age: "1 hour"
 }
 
+
 persist_with: performance_analyze_bigquery_simple_default_datagroup
 
 explore: call_center {}
