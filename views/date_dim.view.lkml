@@ -153,8 +153,13 @@ view: date_dim {
   }
 
   dimension: dMonth_Year {
-    type: string
+    type: number
     sql: EXTRACT(YEAR FROM date_dim.D_DATE)*100 +EXTRACT(MONTH FROM date_dim.D_DATE);;
+   }
+  dimension: F_MonthYear {
+    type: string
+    sql: ${dMonth_Year} ;;
+    suggest_persist_for: "2 minutes"
   }
 
   measure: count {

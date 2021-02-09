@@ -82,6 +82,7 @@ view: web_page {
   dimension: wp_type {
     type: string
     sql: ${TABLE}.WP_TYPE ;;
+    suggest_persist_for: "2 minutes"
   }
 
   dimension: wp_url {
@@ -100,8 +101,13 @@ view: web_page {
     sql: substring(${TABLE}.WP_REC_START_DATE,1,4) ;;
   }
   dimension: Web_Rec_Start_Month_Year{
+    type: number
+    sql: EXTRACT(YEAR FROM WP_REC_START_DATE)*100 +EXTRACT(MONTH FROM WP_REC_START_DATE) ;;
+  }
+  dimension: F_WebRecStart_MonthYear {
     type: string
-    sql: EXTRACT(YEAR FROM web_page.WP_REC_START_DATE)*100 +EXTRACT(MONTH FROM web_page.WP_REC_START_DATE);;
+    sql: ${Web_Rec_Start_Month_Year} ;;
+    suggest_persist_for: "2 minutes"
   }
   measure: count {
     type: count
