@@ -1,5 +1,5 @@
 view: reason {
-  sql_table_name: `TPCDS_DEV.REASON`
+  sql_table_name: `TPCDS.REASON`
     ;;
   drill_fields: [r_reason_id]
 

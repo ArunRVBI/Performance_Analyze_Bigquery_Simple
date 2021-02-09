@@ -1,5 +1,5 @@
 view: warehouse {
-  sql_table_name: `TPCDS_DEV.WAREHOUSE`
+  sql_table_name: `TPCDS.WAREHOUSE`
     ;;
   drill_fields: [w_warehouse_id]
 

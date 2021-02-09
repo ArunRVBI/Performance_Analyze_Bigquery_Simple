@@ -1,5 +1,5 @@
 view: inventory {
-  sql_table_name: `TPCDS_DEV.INVENTORY`
+  sql_table_name: `TPCDS.INVENTORY`
     ;;
 
   dimension: inv_date_sk {

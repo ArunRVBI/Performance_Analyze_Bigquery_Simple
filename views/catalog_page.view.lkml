@@ -1,5 +1,5 @@
 view: catalog_page {
-  sql_table_name: `TPCDS_DEV.CATALOG_PAGE`
+  sql_table_name: `TPCDS.CATALOG_PAGE`
     ;;
   drill_fields: [cp_catalog_page_id]
 

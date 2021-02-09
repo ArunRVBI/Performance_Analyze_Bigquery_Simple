@@ -1,5 +1,5 @@
 view: store {
-  sql_table_name: `TPCDS_DEV.STORE`
+  sql_table_name: `TPCDS.STORE`
     ;;
   drill_fields: [s_store_id]
 

@@ -1,5 +1,5 @@
 view: call_center {
-  sql_table_name: `TPCDS_DEV.CALL_CENTER`
+  sql_table_name: `TPCDS.CALL_CENTER`
     ;;
   drill_fields: [cc_call_center_id]
 

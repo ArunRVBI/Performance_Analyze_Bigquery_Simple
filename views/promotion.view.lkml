@@ -1,5 +1,5 @@
 view: promotion {
-  sql_table_name: `TPCDS_DEV.PROMOTION`
+  sql_table_name: `TPCDS.PROMOTION`
     ;;
 
   dimension: p_channel_catalog {
