@@ -154,7 +154,10 @@ view: date_dim {
 
   dimension: dMonth_Year {
     type: number
-    sql: EXTRACT(YEAR FROM date_dim.D_DATE)*100 +EXTRACT(MONTH FROM date_dim.D_DATE);;
+   # sql: EXTRACT(YEAR FROM date_dim.D_DATE)*100 +EXTRACT(MONTH FROM date_dim.D_DATE);;
+   # sql: (EXTRACT(year FROM D_DATE) * 100) + EXTRACT(Month FROM D_DATE);;
+    sql:  concat(cast(EXTRACT(year FROM D_DATE) as string), '-',cast(EXTRACT(month FROM D_DATE) as string)) ;;
+    suggest_persist_for: "2 minutes"
    }
   dimension: F_MonthYear {
     type: string
