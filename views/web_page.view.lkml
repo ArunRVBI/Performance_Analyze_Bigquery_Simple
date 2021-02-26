@@ -101,7 +101,7 @@ view: web_page {
     sql: substring(${TABLE}.WP_REC_START_DATE,1,4) ;;
   }
   dimension: Web_Rec_Start_Month_Year{
-    type: number
+    type: string
     sql:  concat(cast(EXTRACT(year FROMWP_REC_START_DATE) as string), '-',cast(EXTRACT(month FROM WP_REC_START_DATE) as string)) ;;
     suggest_persist_for: "2 minutes"
   }
