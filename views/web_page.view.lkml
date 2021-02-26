@@ -102,7 +102,7 @@ view: web_page {
   }
   dimension: Web_Rec_Start_Month_Year{
     type: number
-    sql: EXTRACT(YEAR FROM WP_REC_START_DATE)*100 +EXTRACT(MONTH FROM WP_REC_START_DATE) ;;
+    sql:  concat(cast(EXTRACT(year FROMWP_REC_START_DATE) as string), '-',cast(EXTRACT(month FROM WP_REC_START_DATE) as string)) ;;
     suggest_persist_for: "2 minutes"
   }
   dimension: F_WebRecStart_MonthYear {
