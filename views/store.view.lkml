@@ -32,6 +32,7 @@ view: store {
   dimension: s_country {
     type: string
     sql: ${TABLE}.S_COUNTRY ;;
+    drill_fields: [s_county]
   }
 
   dimension: s_county {
